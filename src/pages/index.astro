@@ -1,0 +1,182 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<Layout title="JT Auto Repairs - Professional Car Services in Walsall">
+  <main>
+    <header class="hero">
+      <h1>JT Auto Repairs</h1>
+      <p>Professional vehicle servicing &amp; repairs in Walsall</p>
+    </header>
+
+    <section class="about">
+      <div class="container">
+        <h2>About Our Garage</h2>
+        <p>Family-run auto repair shop with over 15 years of experience serving the Walsall community. We provide honest, reliable service for all makes and models.</p>
+        <div class="image-grid">
+          <img src="/images/garage1.jpg" alt="Our garage workshop" />
+          <img src="/images/garage2.jpg" alt="Mechanic working on car" />
+          <img src="/images/garage3.jpg" alt="Car inspection" />
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+          <div class="card">
+            <h3>General Maintenance</h3>
+            <p>Oil changes, brake checks, tire rotations, and more to keep your vehicle running smoothly.</p>
+          </div>
+          <div class="card">
+            <h3>Diagnostics</h3>
+            <p>State-of-the-art equipment to quickly identify and fix any issues with your vehicle.</p>
+          </div>
+          <div class="card">
+            <h3>Major Repairs</h3>
+            <p>Engine work, transmission repairs, suspension fixes - we handle all major mechanical issues.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+          <div>
+            <h3>Visit Us</h3>
+            <p>19 Lavender Grove<br>Walsall, WS3 1QG</p>
+          </div>
+          <div>
+            <h3>Call Us</h3>
+            <p><a href="tel:07895692772">07895 692772</a></p>
+          </div>
+          <div>
+            <h3>Email Us</h3>
+            <p><a href="mailto:jtautorepairs@outlook.com">jtautorepairs@outlook.com</a></p>
+          </div>
+        </div>
+        <ContactForm />
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  :root {
+    --primary: #1a5fb4;
+    --primary-dark: #1a3a8f;
+    --text: #333;
+    --light: #f8f9fa;
+  }
+
+  body {
+    color: var(--text);
+    background: var(--light);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  section {
+    padding: 4rem 0;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary);
+  }
+
+  h3 {
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .image-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+    }
+    
+    section {
+      padding: 2rem 0;
+    }
+  }
+</style>
